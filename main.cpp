@@ -5,13 +5,14 @@ void Resta(int X,int Y)
     result= X-Y;
     cout<<result<<endl;
 }
-int main()
+void imprimir()
 {
-    cout<<"Ramitas"<<endl;
-    Resta(8,7);
+    cout<<"Bienvenido "<<endl;
+    
 }
 void Suma(int X, int Y)
 {
+    imprimir();
     int result;
     result=X+Y;
     cout<<result<<endl;
