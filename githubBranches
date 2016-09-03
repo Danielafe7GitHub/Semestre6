@@ -1,0 +1,75 @@
+git init 
+git remote add origin git@github.com:Froznar/IS2---Practica01Lab.git
+git pull
+git checkout danielafe7 
+nano Calculadora.cpp
+git add Calculadora.cpp
+git commit -m 'Se completo funcion LogNatural'
+git push
+
+
+
+
+/*Segunda Parte */
+
+primero tienes que borrar lo ultimo que hiciste en la rama con este comando
+
+git push origin :nombre-rama
+
+Despues haremos pull en una nueva carpeta 
+
+mkdir nuevo
+
+cd nuevo/
+
+git init
+
+git pull link_del_repo
+
+git brach tu_rama
+git checkout tu_rama
+
+luego ya editas el .cpp, luego add y commit
+
+y haces push
+
+git push link_del_repo tu_rama
+
+
+
+
+git pull origin master
+/*Para ver lo que hay en la Ramita*/
+git ls-tree -r --name-only danielafe7
+
+
+/*Borrar Commits*/
+git reflog
+git reset --hard 4465a73
+git push git@github.com:Froznar/IS2---Practica01Lab.git danielafe7 --force
+
+
+
+
+/*Resolucion de Conflictos*/
+primero deves estar en tu rama
+luego haces git fetch origin
+uego
+git merge master
+ahora mira tu archi devn haber cambios
+sino es asi
+git merge origin/master
+luego resuelve conflictos y
+git add Calculadora.cpp
+git commit -m 'Se completo funcion LogNatural'
+git push  link_repositorio
+
+
+/*Si no funciona el fetch*/
+PAra verificar 
+git remote -v
+sino sale nada entonces no estamos concetados al repositorio
+has lo siguente
+git remote add origin url/del/git
+
+
