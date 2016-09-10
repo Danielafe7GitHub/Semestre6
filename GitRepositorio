@@ -1,0 +1,27 @@
+Si el repositorio ya existe; y solo quieres 
+subier elementos hacer lo siguiente:
+
+*Importante ubicarse desde la Carpeta*/
+cd Branch
+/*Lee como se inicia el repo en esa carpeta*/
+git init
+git add main.cpp
+git commit -m " "
+/*Para conectarnos al Repositorio con rama Master predefinida*/
+git remote add origin git@github.com:Danielafe7GitHub/Branch_01.git
+/*Ai añadimos los cambios en Master*/
+git push -u origin master
+
+/*Si aqui te salen fallos como:*/
+
+error: failed to push some refs to 'git@github.com:Danielafe7GitHub/Branch_01.git'
+consejo: Updates were rejected because the tip of your current branch is behind
+consejo: its remote counterpart. Integrate the remote changes (e.g.
+consejo: 'git pull ...') before pushing again.
+consejo: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+/*Es porque tu repositorio local no esta actualizado; asuiendo que no tenmos ramas y solo trabajamos con MASTER:*/
+
+git pull origin master
+git push -u origin master
