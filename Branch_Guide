@@ -1,0 +1,40 @@
+/*Importante ubicarse desde la Carpeta*/
+cd Branch
+/*Lee como se inicia el repo en esa carpeta*/
+git init
+git add main.cpp
+git commit -m " "
+/*Para conectarnos al Repositorio con rama Master predefinida*/
+git remote add origin git@github.com:Danielafe7GitHub/Branch_01.git
+/*Ai añadimos los cambios en Master*/
+git push -u origin master
+
+/*Creando Ramita*/ >> Se crea con los archivos actuales de MASTER
+git branch ramita_01
+git checkout ramita_01
+git add main.cpp
+git commit -m " "
+git push git@github.com:Danielafe7GitHub/Branch_01.git
+
+/*Ahora aparecen en el Grafico y podras solicitar pull request*/
+/*Solucionando Conflictos*/
+git checkout ramita_02
+git fetch origin
+git merge origin/master
+/*Resuelve los conflictos*/
+git add main.cpp
+git commit -m " "
+git push git@github.com:Danielafe7GitHub/Branch_01.git
+
+
+/*Segunda Parte*/
+git checkout master /*Te pedira hacer pull por lso recientes cambios*/
+git pull link_del_repo
+git push /*Aveces lo pide*/
+/*Y asi en cada Ramita*/
+git checkout ramita_01
+git pull link_del_repo
+
+
+
+
